@@ -1,0 +1,29 @@
+NAME = libftprintf.a
+
+all : $(NAME)
+
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror 
+
+CFILES = ft_printf.c \
+	 ft_check_str.c\
+	 print_char.c \
+	 print_string.c \
+	print_pointer.c  
+
+OFILES = $(CFILES:.c=.o)
+
+$(NAME) : $(OFILES)
+	ar rcs $@ $^ 
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean :
+	rm -f $(OFILES)
+
+fclean : clean
+	rm -f $(NAME)
+
+re : fclean all

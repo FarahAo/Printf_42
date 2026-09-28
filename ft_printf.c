@@ -12,33 +12,28 @@
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
-{	
-	va_list args;
-	va_start(args, format);
+int	ft_printf(const char *str, ...)
+{
+	size_t	i;
+	int		count;
+	va_list	track;
 
-	size_t	count = 0;
-
-	while(*format && *format != '%')
+	va_start(track, str);
+	i = 0;
+	count = 0;
+	while (str[i])
 	{
-		write(1, format, 1);
-		format++;
-		count++;
-	}
-	if (*format == '%')
-		format++;
-	if (*format == 'c')
-	{
-		int c = va_arg(args, int);
-		char ch = c;
-		write(1, &ch, 1);
-		count++;
+		if (str[i] == '%')
+		{
+			i++;
+			count += ft_check_str(str[i], track);
+		}
+		else
+		{
+			write(1, &str[i], 1);
+			count++;
+		}
+		i++;
 	}
 	return (count);
-	
-}
-int main()
-{
-	ft_printf("test character %c", 'A', 'B');
-
 }

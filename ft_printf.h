@@ -15,7 +15,13 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *str, ...);
+int	ft_check_str(const char str, va_list track);
+int	print_char(char c);
+int	print_string(char *c);
+int	print_pointer(void *ptr);
+
 
 #endif
