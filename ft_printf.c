@@ -6,7 +6,7 @@
 /*   By: fabo-ome <fabo-ome@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 13:25:05 by fabo-ome          #+#    #+#             */
-/*   Updated: 2026/09/29 17:43:09 by fabo-ome         ###   ########.fr       */
+/*   Updated: 2026/09/29 18:30:12 by fabo-ome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_printf(const char *str, ...)
 	size_t	i;
 	int		count;
 	va_list	track;
-	
+
 	if (!str)
 		return (-1);
 	va_start(track, str);
