@@ -20,10 +20,8 @@ int	print_lowerhexa(unsigned int a)
 	count = 0;
 	arr = "0123456789abcdef";
 	if (a == 0)
-	{
-		count = print_char('0');
-		return (count);
-	}
+		return (print_char('0'));
+	return (print_lowerhexa(a));
 	count = print_lowerhexa(a / 16);
 	write(1, &arr[a % 16], 1);
 	count++;

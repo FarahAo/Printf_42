@@ -18,7 +18,7 @@ static int	convert_tohexa(unsigned long p)
 	int		count;
 
 	count = 0;
-	arr = "0123456789ABCDEF";
+	arr = "0123456789abcdef";
 	if (p == 0)
 		return (count);
 	count = convert_tohexa(p / 16);

@@ -23,10 +23,10 @@ CFILES = ft_printf.c \
 	 print_char.c \
 	 print_string.c \
 	print_pointer.c \
-       print_integer.c \	
+       print_integer.c \
 	print_unsigned.c \
 	print_lowerhexa.c \
-	print_upperhexa.c \
+	print_upperhexa.c 
 
 OFILES = $(CFILES:.c=.o)
 

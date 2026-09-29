@@ -20,10 +20,8 @@ int	print_upperhexa(unsigned int a)
 	count = 0;
 	arr = "0123456789ABCDEF";
 	if (a == 0)
-	{
-		count = print_char('0');
-		return (count);
-	}
+		return (print_char('0'));
+	return (print_upperhexa(a));
 	count = print_upperhexa(a / 16);
 	write(1, &arr[a % 16], 1);
 	count++;
